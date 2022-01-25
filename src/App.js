@@ -1,8 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+import "./App.css";
+import Api from "./api/Api";
+
 function App() {
-    return <div> react app</div>;
+    return (
+        <div>
+            <Api />
+        </div>
+    );
 }
 
 export default App;
