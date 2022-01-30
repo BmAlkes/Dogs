@@ -1,13 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
-
-import "./App.css";
-import Api from "./api/Api";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./api/components/Header";
+import Footer from "./api/components/Footer";
+import Home from "./api/components/Home/Home";
+import Login from "./api/components/Login";
 
 function App() {
     return (
         <div>
-            <Api />
+            <BrowserRouter>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                </Routes>
+                <Footer />
+            </BrowserRouter>
         </div>
     );
 }
