@@ -11,7 +11,7 @@ const User = () => {
             <UserHeader />
             <Routes>
                 <Route path="/" element={<Feed />} />
-                <Route path="/post" element={<UserPhotoPost />} />
+                <Route path="/photo" element={<UserPhotoPost />} />
                 <Route path="/statics" element={<UserStats />} />
             </Routes>
         </section>
