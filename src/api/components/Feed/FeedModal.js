@@ -5,7 +5,6 @@ import { PHOTO_GET } from "../../../api";
 import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";
 import PhotoContent from "../Photo/PhotoContent";
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
 
 const FeedModal = ({ photo, setModalPhoto }) => {
     const { data, error, loading, request } = useFetch();
