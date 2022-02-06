@@ -12,7 +12,7 @@ const PhotoContent = ({ data }) => {
             </div>
             <div className={styles.details}>
                 <div>
-                    <p>
+                    <p className={styles.author}>
                         <Link to={`/perfil/${photo.author}`}>
                             @{photo.author}
                         </Link>
@@ -29,7 +29,7 @@ const PhotoContent = ({ data }) => {
                     </ul>
                 </div>
             </div>
-            <PhotoComments id={photo.id} comments={comments} />
+            <PhotoComments id={photo.id} />
         </div>
     );
 };
