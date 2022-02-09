@@ -3,6 +3,7 @@ import { COMMENT_POST } from "../../../api";
 import { ReactComponent as Send } from "../../../Assets/enviar.svg";
 import Error from "../Helpers/Error";
 import useFetch from "../../../hooks/useFetch";
+import style from "./PhotoCommentsForm.module.css";
 
 const PhotoCommetsForm = ({ id, setCommets }) => {
     const { request, error } = useFetch();
@@ -19,8 +20,9 @@ const PhotoCommetsForm = ({ id, setCommets }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={style.form}>
             <textarea
+                className={style.textarea}
                 id="comment"
                 name="coment"
                 value={comment}
@@ -29,7 +31,7 @@ const PhotoCommetsForm = ({ id, setCommets }) => {
                     setCommet(target.value);
                 }}
             ></textarea>
-            <button>
+            <button className={style.button}>
                 <Send />
             </button>
             <Error error={error} />
