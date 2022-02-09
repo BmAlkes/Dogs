@@ -9,6 +9,7 @@ import User from "./api/components/User/User";
 import ProtectedRoute from "./api/components/Helpers/ProtectedRoute";
 import Photo from "./api/components/Photo/Photo";
 import UserProfile from "./api/components/User/UserProfile";
+import Notfound from "./api/components/Notfound";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="login/*" element={<Login />} />
                             <Route path="foto/:id" element={<Photo />} />
+                            <Route path="*" element={<Notfound />} />
                             <Route
                                 path="perfil/:user"
                                 element={<UserProfile />}
