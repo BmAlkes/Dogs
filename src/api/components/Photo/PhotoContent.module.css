@@ -11,6 +11,10 @@
     transform: scale(0.8);
     animation: scaleUp 0.1s forwards;
 }
+.single.photo {
+    grid-template-columns: 1fr;
+    height: auto;
+}
 
 @keyframes scaleUp {
     to {
@@ -23,8 +27,18 @@
     padding: 2rem 2rem 0 2rem;
 }
 
+.single .details {
+    padding: 0;
+}
+
 .img {
     grid-row: 1/4;
+}
+
+.single .img {
+    grid-row: 1/1;
+    border-radius: 0.9rem;
+    overflow: hidden;
 }
 
 .comments {
