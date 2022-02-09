@@ -87,3 +87,13 @@ a {
 .mainContainer {
     margin-top: 4rem;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh);
+}
+
+.AppBody {
+    flex: 1;
+}
