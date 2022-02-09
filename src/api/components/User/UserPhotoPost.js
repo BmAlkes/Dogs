@@ -7,6 +7,7 @@ import Button from "../Forms/Button";
 import Error from "../Helpers/Error";
 import { PHOT_POST } from "../../../api";
 import { useNavigate } from "react-router-dom";
+import Head from "../Helpers/Head";
 
 const UserPhotoPost = () => {
     const nome = useForm();
@@ -42,6 +43,7 @@ const UserPhotoPost = () => {
 
     return (
         <section className={`${styles.photoPost} animeLeft`}>
+            <Head title="Post your Picture" />
             <form onSubmit={handleSubmit}>
                 <Input label="Name" type="text" name="nome" {...nome} />
                 <Input label="Weight" type="text" name="peso" {...peso} />
