@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "../Helpers/Image";
 import styles from "./FeedPhotoItem.module.css";
 
 function FeedPhotoItem({ photo, setModalPhoto }) {
@@ -7,7 +8,7 @@ function FeedPhotoItem({ photo, setModalPhoto }) {
     };
     return (
         <li className={`${styles.photo} animeLeft`} onClick={handleClick}>
-            <img src={photo.src} alt={photo.title} />
+            <Image src={photo.src} alt={photo.title} />
             <span className={styles.watch}>{photo.acessos}</span>
         </li>
     );
